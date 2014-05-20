@@ -14,7 +14,7 @@ gem 'sass'
 gem 'paperclip'
 gem 'devise'
 gem 'remotipart'
-gem " gmap_coordinates_picker"
+gem 'gmap_coordinates_picker'
 
 
 group :development do

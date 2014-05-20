@@ -6,6 +6,31 @@
 </ul>
 
 
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-mde7xDVbCRCpv1C0Nyv7CkL70QOizIg&sensor=TRUE">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 18
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  
+    <div id="map-canvas" style="height: 300px; width: 300px;"></div>
+  
+
+
 <p><%= link_to "Edit", edit_make_path(@make), :class => "btn btn-default" %></p>
 <p><%= link_to "Delete", make_path(@make),
                         :confirm => "You sure?",

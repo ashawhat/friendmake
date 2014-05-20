@@ -15,15 +15,13 @@
     <%= f.text_field :content %>
     <%= f.label :location %>
     <%= f.text_field :location %>
+    <%= f.label :latitude %>
+    <%= f.text_field :latitude %>
+    <%= f.label :longitude %>
+    <%= f.text_field :longitude %>
     <%= f.label :schedule %>
     <%= f.text_field :schedule %>
   </div>
   <%= f.submit(:class => "btn btn-primary") %>
 <% end %>
 
-
-
-t.string   "name"
-    t.string   "content"
-    t.string   "location"
-    t.datetime "schedule"
