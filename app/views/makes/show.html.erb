@@ -1,0 +1,14 @@
+<h1><%= @make.name %></h1>
+<ul>
+	<li><%= @make.content %></li>
+	<li><%= @make.schedule %></li>
+	<li><%= @make.location %></li>
+</ul>
+
+
+<p><%= link_to "Edit", edit_make_path(@make), :class => "btn btn-default" %></p>
+<p><%= link_to "Delete", make_path(@make),
+                        :confirm => "You sure?",
+                        :method => "delete",
+                        :class => "btn btn-danger" %></p>
+<p><a href="/makes">Return to make listing</a></p>

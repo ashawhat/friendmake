@@ -10,4 +10,10 @@
 
 <h3>Create a Make</h3>
 <a href="makes/new">Create a New Make</a>
+
 <h3>View Makes</h3>
+<ul>
+  <% @make.each do |make| %>
+    <li><a href="/makes/<%= make.id %>"><%= make.name %></a></li>
+  <% end %>
+</ul>

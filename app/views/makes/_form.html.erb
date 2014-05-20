@@ -1,0 +1,29 @@
+<% if object.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+  <% object.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(object) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <%= f.label :schedule %>
+    <%= f.text_field :schedule %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>
+
+
+
+t.string   "name"
+    t.string   "content"
+    t.string   "location"
+    t.datetime "schedule"
