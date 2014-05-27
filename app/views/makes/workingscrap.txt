@@ -1,0 +1,13 @@
+<%= form_tag makes_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search Near", :name => nil %>
+  </p>
+<% end %>
+
+
+  #   if params[:search].present?
+  #    @makes = Make.near(params[:search], 50, :order => :distance)
+  # else
+    @makes = Make.all
+  # end

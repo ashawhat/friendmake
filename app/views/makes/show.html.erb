@@ -3,8 +3,15 @@
 	<li><%= @make.content %></li>
 	<li><%= @make.schedule %></li>
 	<li><%= @make.location %></li>
+	<li><%= @make.latitude %></li>
+	<li><%= @make.longitude %></li>
 </ul>
 
+<h2>Discussion</h2>
+  <p><%= link_to "New", new_comment_path(@comment), :class => "btn btn-default" %></p>
+  <ul>
+    <li><%= @all_comments %></li>
+  </ul>
 
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <style type="text/css">
@@ -18,7 +25,7 @@
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
+          center: new google.maps.LatLng(@makes.latitude, @makes.longitude),
           zoom: 18
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),

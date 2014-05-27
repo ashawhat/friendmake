@@ -12,9 +12,15 @@ gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'sass'
 gem 'paperclip'
-gem 'devise'
+# gem 'devise'
 gem 'remotipart'
 gem 'gmap_coordinates_picker'
+gem 'geocoder'
+gem 'protected_attributes'
+gem 'acts_as_commentable_with_threading'
+#gem 'devise'
+gem 'omniauth-facebook'
+
 
 
 group :development do
@@ -22,6 +28,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'letter_opener'
+  gem 'nifty-generators'
 end
 
 group :test, :development do
@@ -33,3 +40,5 @@ end
 group :test do
   gem 'shoulda-matchers'
 end
+
+gem "mocha", group: :test

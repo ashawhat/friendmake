@@ -1,15 +1,18 @@
 class MakesController < ApplicationController
 	def index
-		 @make = Make.all
-	end
+    @makes = Make.all
+  end
+	
 
 	def new
 		@make = Make.new
 	end
 
 	def create
-    @Make = Make.new(make_params)
-    if @Make.save
+    @make = Make.new(make_params)
+    YAML::dump(@make);
+
+    if @make.save
       flash[:notice] = "Make created."
       redirect_to makes_path
     else
@@ -23,6 +26,7 @@ class MakesController < ApplicationController
 
 	def edit
     @make = Make.find(params[:id])
+    
   end
 
   def update
@@ -43,8 +47,8 @@ class MakesController < ApplicationController
   end
 
 
-private
-	def make_params
-		params.require(:make).permit(:name, :content, :location, :schedule)
-	end
+  private
+  	def make_params
+  		params.require(:make).permit(:name, :content, :location, :schedule, :latitude, :longitude)
+  	end
 end

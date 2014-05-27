@@ -8,12 +8,15 @@
 
 <%= image_tag("download.jpeg", :alt => "Make Revolution, MAKE FRIENDSHIP") %>
 
-<h3>Create a Make</h3>
+<br>
 <a href="makes/new">Create a New Make</a>
 
 <h3>View Makes</h3>
+
+
+
 <ul>
-  <% @make.each do |make| %>
+  <% @makes.each do |make| %>
     <li><a href="/makes/<%= make.id %>"><%= make.name %></a></li>
   <% end %>
 </ul>

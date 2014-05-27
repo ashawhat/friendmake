@@ -1,0 +1,7 @@
+<h1>I'm So Fanceh.  You Already Know</h1>
+
+<ul>
+  <% @location.each do |make| %>
+    <li><a href="/location/<%= location.id %>"><%= location.address %></a></li>
+  <% end %>
+</ul>
