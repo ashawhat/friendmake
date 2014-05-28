@@ -18,8 +18,7 @@ gem 'gmap_coordinates_picker'
 gem 'geocoder'
 gem 'protected_attributes'
 gem 'acts_as_commentable_with_threading'
-#gem 'devise'
-gem 'omniauth-facebook'
+
 
 
 

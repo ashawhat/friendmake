@@ -11,3 +11,12 @@
   # else
     @makes = Make.all
   # end
+
+
+
+
+  <h2>Discussion</h2>
+  <p><%= link_to "New", new_comment_path(@comment), :class => "btn btn-default" %></p>
+  <ul>
+    <li><%= @all_comments %></li>
+  </ul>

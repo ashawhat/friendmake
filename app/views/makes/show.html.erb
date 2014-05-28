@@ -3,54 +3,40 @@
     <style type="text/css">
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
-    #map-canvas { height: 100% }
+      #map-canvas { height: 100% }
     </style>
-    <script type="text/javascript"
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4IIKINuYayXQWTefOtvOnSvZ87pqHBVk&sensor=TRUE">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4IIKINuYayXQWTefOtvOnSvZ87pqHBVk&sensor=TRUE"></script>
     <script type="text/javascript">
-     function initialize() {
-       var mapOptions = {
-        center: new google.maps.LatLng(<%= @make.latitude %>, <%= @make.longitude %>),
-        zoom: 18
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(<%= @make.latitude %>, <%= @make.longitude %>),
+          zoom: 18
         };
-       var map = new google.maps.Map(document.getElementById("map-canvas"),
-        mapOptions);
-       }
-     google.maps.event.addDomListener(window, 'load', initialize);
-   </script>
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+      }
+
+      jQuery(document).ready(initialize);
+     </script>
 <% end %>
 
 
 
 <h1><%= @make.name %></h1>
 <ul>
-	<li><%= @make.content %></li>
-	<li><%= @make.schedule %></li>
-	<li><%= @make.location %></li>
-	<li><%= @make.latitude %></li>
-	<li><%= @make.longitude %></li>
+  <li><%= @make.content %></li>
+  <li><%= @make.schedule %></li>
+  <li><%= @make.location %></li>
+  <li><%= @make.latitude %></li>
+  <li><%= @make.longitude %></li>
 </ul>
 
-<h2>Discussion</h2>
-  <p><%= link_to "New", new_comment_path(@comment), :class => "btn btn-default" %></p>
-  <ul>
-    <li><%= @all_comments %></li>
-  </ul>
-
    
-
 <div id="map-canvas" style="height: 500px; width: 500px;"></div>
 
     
-  
-
-
 <p><%= link_to "Edit", edit_make_path(@make), :class => "btn btn-default" %></p>
 <p><%= link_to "Delete", make_path(@make),
                         :confirm => "You sure?",
                         :method => "delete",
                         :class => "btn btn-danger" %></p>
 <p><a href="/makes">Return to make listing</a></p>
-
-<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
