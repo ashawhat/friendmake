@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-	
+
  
 	def index
 		@the_make = Make.find_by_id(params[:id])

@@ -7,6 +7,7 @@ Friendmake::Application.routes.draw do
  resources :makes
  resources :locations
  resources :comments
+ resources :users
 
   root to: "makes#index"
   # The priority is based upon order of creation: first created -> highest priority.
