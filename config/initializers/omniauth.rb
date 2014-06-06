@@ -1,5 +1,5 @@
 OmniAuth.config.logger = Rails.logger
-
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development? 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :facebook, ENV['1411951029087067'], ENV['7b3cf986d098a4da852601501c03ccf2']
+  provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
 end

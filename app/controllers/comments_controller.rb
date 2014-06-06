@@ -54,6 +54,6 @@ class CommentsController < ApplicationController
 
   private
   	def comment_params
-  		params.require(:comment).permit(:title, :body, :subject)
+  		params.require(:comment).permit(:title, :body, :subject).merge(user: current_user)
   	end
 end

@@ -3,14 +3,22 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
+h1{
+	font-family: 'Cantata One', serif;
+}
+
 a{
 	color: white;
-	text-decoration: none;
+	text-decoration: underline;
 	font-size: 20px;
 }
 
-a:visited{
+a:hover{
 	color: white;
+}
+
+a:visited{
+	color: #3f3f3f;
 	text-decoration: none;
 }
 
@@ -19,4 +27,12 @@ a:visited{
   margin-left: 10%;
   margin-right: auto;
   margin-top: 50px;
+}
+
+.center{
+	text-align: center;
+}
+
+.textdec{
+	font-family: 'Playfair Display SC', serif;
 }

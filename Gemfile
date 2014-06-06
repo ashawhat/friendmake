@@ -12,13 +12,13 @@ gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'sass'
 gem 'paperclip'
-# gem 'devise'
+gem 'devise'
 gem 'remotipart'
 gem 'gmap_coordinates_picker'
 gem 'geocoder'
 gem 'protected_attributes'
 gem 'acts_as_commentable_with_threading'
-
+gem 'omniauth-facebook'
 
 
 
@@ -28,6 +28,7 @@ group :development do
   gem 'quiet_assets'
   gem 'letter_opener'
   gem 'nifty-generators'
+  gem 'pry'
 end
 
 group :test, :development do

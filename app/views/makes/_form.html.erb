@@ -10,17 +10,11 @@
 <%= form_for(object) do |f| %>
   <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name %><br>
     <%= f.label :content %>
-    <%= f.text_field :content %>
+    <%= f.text_field :content %><br>
     <%= f.label :location %>
-    <%= f.text_field :location %>
-    <%= f.label :latitude %>
-    <%= f.text_field :latitude %>
-    <%= f.label :longitude %>
-    <%= f.text_field :longitude %>
-    <%= f.label :schedule %>
-    <%= f.text_field :schedule %>
+    <%= f.text_field :location %><br>
   </div>
   <%= f.submit(:class => "btn btn-primary") %>
 <% end %>

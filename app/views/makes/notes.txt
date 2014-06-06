@@ -1,0 +1,7 @@
+We need to tie a make to a creator
+
+We need to create an "Application" -> "Proposal" || "Salutation": Something that says "I want to do this thing with you."
+
+
+Look up Dates using my browsers GPS Shit. "Find shit within 10 miles of my ass."
+http://diveintohtml5.info/geolocation.html
